@@ -1,10 +1,14 @@
+import { useState } from "react";
 import "./App.css";
+import Sidebar from "./component/Sidebar";
 
 function App() {
+  const [activeTab, setActiveTab] = useState("projects");
+
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello my web!</h1>
-    </>
+    <div className="bg-slate-800 h-screen text-teal-50">
+      <Sidebar />
+    </div>
   );
 }
 
