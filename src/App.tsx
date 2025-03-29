@@ -1,13 +1,19 @@
 import { useState } from "react";
 import "./App.css";
 import Sidebar from "./component/Sidebar";
+import Explorer from "./component/Explorer";
+import Content from "./component/Content";
 
 function App() {
   const [activeTab, setActiveTab] = useState("projects");
 
   return (
-    <div className="bg-slate-800 h-screen text-teal-50">
-      <Sidebar />
+    <div className="flex bg-slate-900 h-screen text-teal-50 overflow-hidden">
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Explorer />
+      <div className="flex-1 overflow-auto">
+        <Content />
+      </div>
     </div>
   );
 }

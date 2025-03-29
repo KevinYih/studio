@@ -1,3 +1,5 @@
 # React + TypeScript + Vite + tailwind
 
-npm i lucide-react
+npm install lucide-react
+
+npm install motion
