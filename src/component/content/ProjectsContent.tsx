@@ -8,7 +8,7 @@ const ProjectsContent: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-slate-400 px-2 py-6">
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6  bg-gray-900">
         {projects.map((project, index) => (
-          <motion.div key={index} whileHover={{ scale: 1.02 }} className="bg-gray-800 flex flex-col rounded-lg overflow-hidden shadow-md hover:text-slate-200">
+          <motion.div key={index} whileHover={{ scale: 1.02 }} className="bg-gray-800 flex flex-col rounded-lg overflow-hidden shadow-md text-slate-400 hover:text-slate-200">
             <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
             <div className="p-4 flex flex-col flex-1 min-w-0">
               <h3 className="text-lg font-semibold break-words mb-2">{project.title}</h3>

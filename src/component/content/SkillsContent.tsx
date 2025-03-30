@@ -23,9 +23,9 @@ const SkillsContent: React.FC = () => {
   );
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="text-gray-300 p-6 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-gray-800 rounded-lg p-6">
-        <h2 className="text-2xl font-bold mb-4">Skills</h2>
+        <h2 className=" text-2xl font-bold mb-4">Skills</h2>
         <p className="text-gray-300 mb-6">I'm a full-stack developer with expertise in modern web technologies. With several years of experience in building scalable applications, I focus on creating efficient, maintainable, and user-friendly solutions.</p>
 
         {/* Frontend */}
