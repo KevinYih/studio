@@ -1,31 +1,113 @@
 import React from "react";
 
-import AboutExplorer from "./explorer/AboutExplorer";
-import ProjectsExplorer from "./explorer/ProjectsExplorer";
-import SkillsExplorer from "./explorer/SkillsExplorer";
-import ContactExplorer from "./explorer/ContactExplorer";
+import { useState } from "react";
+import { Folder, FolderOpen, Monitor, Server, Workflow, GraduationCap, Briefcase, UserPlus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
-interface ExplorerProps {
-  activeTab: string;
+import { projects } from "../data/projects";
+import techIcons from "../data/techIcons";
+
+interface FolderItemProps {
+  label: string;
+  children: React.ReactNode;
+  active?: boolean;
+  onClick?: () => void;
 }
 
-const Explorer: React.FC<ExplorerProps> = ({ activeTab }) => {
+const FolderItem: React.FC<FolderItemProps> = ({ label, children, active, onClick }) => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => {
+    setOpen(!open);
+    onClick?.();
+  };
+
   return (
-    <div className="w-64 bg-slate-800 p-4 overflow-auto">
-      {activeTab === "about" && <AboutExplorer />}
-      {activeTab === "projects" && <ProjectsExplorer />}
-      {activeTab === "skills" && <SkillsExplorer />}
-      {activeTab === "contact" && <ContactExplorer />}
+    <div>
+      <button onClick={toggle} className={`flex items-center px-2 py-1 w-full text-left hover:bg-slate-700 ${active ? "bg-slate-600 text-white" : "text-slate-300"}`}>
+        {open ? <FolderOpen size={16} className="mr-2" /> : <Folder size={16} className="mr-2" />}
+        {label}
+      </button>
+
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="ml-6">
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
-{
-  /* <div className="bg-gray-700 h-screen overflow-auto">
-<div className="p-2">
-  <div className="text-sm tracking-wide text-gray">EXPLORER</div>
-</div>
-</div> */
+interface ExplorerProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
 }
+
+const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
+  console.log("Explorer: " + activeTab);
+
+  return (
+    <div className="hidden sm:block w-64 bg-slate-800 text-sm p-3 border-r border-slate-700 overflow-auto">
+      <div className="text-xs text-gray-400 mb-2">EXPLORER</div>
+      <div className="text-xs mb-1 text-gray-300 flex">
+        <FolderOpen size={16} className="mr-2" />
+        KevinYih
+      </div>
+
+      <div className="ml-1 space-y-1">
+        <FolderItem label="about" active={activeTab === "about"} onClick={() => setActiveTab("about")}>
+          <div className="text-slate-400 pl-6 py-1 flex items-center gap-2">
+            <Briefcase size={16} />
+            Experience
+          </div>
+          <div className="text-slate-400 pl-6 py-1 flex items-center gap-2">
+            <GraduationCap size={16} />
+            Education
+          </div>
+        </FolderItem>
+
+        <FolderItem label="projects" active={activeTab === "projects"} onClick={() => setActiveTab("projects")}>
+          <div className="space-y-2">
+            {projects.map((project) => {
+              const match = techIcons.find((t) => t.name === project.technologies[0]);
+              if (!match) return null;
+              return (
+                <div className="text-slate-400 pl-6 py-0.5 lowercase flex items-center gap-2">
+                  {" "}
+                  <img src={match.icon} alt={match.name} className="w-5 h-5" style={{ filter: "drop-shadow(0 0 1px rgba(255,255,255,0.5))" }} />
+                  {project.title}
+                </div>
+              );
+            })}
+          </div>
+        </FolderItem>
+
+        <FolderItem label="skills" active={activeTab === "skills"} onClick={() => setActiveTab("skills")}>
+          <div className="text-slate-400 pl-6 py-1 flex items-center gap-2">
+            <Monitor size={16} />
+            <span>Frontend</span>
+          </div>
+          <div className="text-slate-400 pl-6 py-1 flex items-center gap-2">
+            <Server size={16} />
+            <span>Backend</span>
+          </div>
+          <div className="text-slate-400 pl-6 py-1 flex items-center gap-2">
+            <Workflow size={16} />
+            <span>Devops</span>
+          </div>
+        </FolderItem>
+
+        <FolderItem label="contact" active={activeTab === "contact"} onClick={() => setActiveTab("contact")}>
+          <div className="text-slate-400 pl-6 py-1 flex items-center gap-2">
+            <UserPlus size={16} />
+            <span>Connect</span>
+          </div>
+        </FolderItem>
+      </div>
+    </div>
+  );
+};
 
 export default Explorer;

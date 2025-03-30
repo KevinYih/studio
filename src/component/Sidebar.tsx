@@ -15,6 +15,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     { icon: <Mail size={24} strokeWidth={1.8} />, id: "contact", label: "Contact" },
   ];
 
+  console.log("sidebar: " + activeTab);
+
   return (
     <div>
       <div className="w-18 bg-gray-900 text-slate-600 h-screen flex flex-col py-5 items-center">

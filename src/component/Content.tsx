@@ -9,13 +9,18 @@ interface ContentProps {
   activeTab: string;
 }
 
+//max-w-8xl
+
 const Content: React.FC<ContentProps> = ({ activeTab }) => {
+  console.log("content: " + activeTab);
   return (
-    <div className="p-6">
-      {activeTab === "about" && <AboutContent />}
-      {activeTab === "projects" && <ProjectsContent />}
-      {activeTab === "skills" && <SkillsContent />}
-      {activeTab === "contact" && <ContactContent />}
+    <div className="w-full h-full  justify-center">
+      <div className="p-2 ">
+        {activeTab === "about" && <AboutContent />}
+        {activeTab === "projects" && <ProjectsContent />}
+        {activeTab === "skills" && <SkillsContent />}
+        {activeTab === "contact" && <ContactContent />}
+      </div>
     </div>
   );
 };

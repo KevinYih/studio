@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="flex bg-slate-900 h-screen text-teal-50 overflow-hidden">
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Explorer activeTab={activeTab} />
+      <Explorer activeTab={activeTab} setActiveTab={setActiveTab} />
       <div className="flex-1 overflow-auto">
         <Content activeTab={activeTab} />
       </div>
