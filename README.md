@@ -1,12 +1,40 @@
-# React + TypeScript + Vite + tailwind
+# 🧑‍💻 VS Code Style Developer Portfolio
 
-npm install lucide-react
+A **VS Code–inspired personal website** built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.  
+This portfolio mimics the look and feel of Visual Studio Code, providing a unique and developer-friendly experience for showcasing your work.
 
-npm install motion
+---
 
-Externally imported JS and CSS are embedded into HTML, and a single-file HTML is output.
+## 🎯 Features
 
-npm install -g inline-source-cli
-npm install --save-dev inline-source
+- 🖥️ **VS Code UI Layout** — side panel, tabbed interface, and editor-like content areas
+- ⚛️ **React + TypeScript** — modern, type-safe component architecture
+- 🎨 **Tailwind CSS** — fast and responsive styling with utility classes
+- ✨ **Framer Motion** — smooth transitions and animations
+- 🌗 **Dark Mode** — native dark theme matching VS Code
+- 📱 **Responsive** — mobile-first and fully responsive
 
-npm run build
+---
+
+## 🚀 Tech Stack
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+## 📁 Project Structure
+
+src/
+├── assets/ # Static images, icons, etc.
+├── components/ # Reusable UI components (e.g. Sidebar, Tabs, EditorPanel)
+| └── content/ # AboutContent,ContactContent,ProjectsContent,SkillsContent
+| └── Content.tsx # Content
+| └── Explorer.tsx # Content
+| └── Sidebar.tsx # Content
+├── data/ # projects.ts techIcons.ts
+|
+├── App.tsx # Root component
+└── main.tsx # Entry point
