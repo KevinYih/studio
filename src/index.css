@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-sidebarbg: #161821;
+  --color-explorerbg: #1e1f2b;
+  --color-contentbg: #282a3a;
+}

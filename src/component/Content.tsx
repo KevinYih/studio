@@ -15,7 +15,7 @@ const Content: React.FC<ContentProps> = ({ activeTab }) => {
   console.log("content: " + activeTab);
   return (
     <div className="w-full h-full  justify-center">
-      <div className="p-2 ">
+      <div className="p-2 bg-contentbg">
         {activeTab === "about" && <AboutContent />}
         {activeTab === "projects" && <ProjectsContent />}
         {activeTab === "skills" && <SkillsContent />}

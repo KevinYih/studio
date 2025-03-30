@@ -19,7 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
 
   return (
     <div>
-      <div className="w-18 bg-gray-900 text-slate-600 h-screen flex flex-col py-5 items-center">
+      <div className="w-18 bg-sidebarbg text-slate-600 h-screen flex flex-col py-5 items-center">
         {menu.icon}
         {sidebarItems.map((item) => (
           <motion.button key={item.id} onClick={() => setActiveTab(item.id)} whileTap={{ scale: 0.95 }} className={`p-3 mb-2 cursor-pointer hover:text-slate-300  ${activeTab == item.id && "text-slate-300 border-l-1"}`}>

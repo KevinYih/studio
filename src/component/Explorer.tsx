@@ -49,7 +49,7 @@ const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
   console.log("Explorer: " + activeTab);
 
   return (
-    <div className="hidden sm:block w-64 bg-slate-800 text-sm p-3 border-r border-slate-700 overflow-auto">
+    <div className="hidden sm:block w-64 bg-explorerbg text-sm p-3 border-r border-slate-700 overflow-auto">
       <div className="text-xs text-gray-400 mb-2">EXPLORER</div>
       <div className="text-xs mb-1 text-gray-300 flex">
         <FolderOpen size={16} className="mr-2" />
