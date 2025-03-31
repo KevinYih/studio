@@ -22,6 +22,8 @@ This portfolio mimics the look and feel of Visual Studio Code, providing a uniqu
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [lucide icon](https://lucide.dev/)
+- [react-icons](https://react-icons.github.io/react-icons/)
 
 ---
 

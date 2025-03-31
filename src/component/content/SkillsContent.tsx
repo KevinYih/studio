@@ -14,19 +14,19 @@ const SkillsContent: React.FC = () => {
       {techIcons
         .filter((tech) => skills.includes(tech.name))
         .map((tech) => (
-          <div key={tech.name} className="flex items-center gap-2 bg-slate-700 text-white px-3 py-1 rounded shadow">
+          <div key={tech.name} className="flex items-center gap-2 bg-contentbg dark:bg-contentbgd text-white px-3 py-1 rounded shadow">
             <img src={tech.icon} alt={tech.name} className="w-5 h-5" title={tech.name} />
-            <span className="text-sm">{tech.name}</span>
+            <span className="text-sm text-slate-300 dark:text-slate-700">{tech.name}</span>
           </div>
         ))}
     </div>
   );
 
   return (
-    <div className="text-gray-300 p-6 max-w-4xl mx-auto">
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-gray-800 rounded-lg p-6">
+    <div className="text-slate-300 dark:text-slate-700 p-6 max-w-4xl mx-auto">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-explorerbg dark:bg-explorerbgd rounded-lg p-6">
         <h2 className=" text-2xl font-bold mb-4">Skills</h2>
-        <p className="text-gray-300 mb-6">I'm a full-stack developer with expertise in modern web technologies. With several years of experience in building scalable applications, I focus on creating efficient, maintainable, and user-friendly solutions.</p>
+        <p className="mb-6">I'm a full-stack developer with expertise in modern web technologies. With several years of experience in building scalable applications, I focus on creating efficient, maintainable, and user-friendly solutions.</p>
 
         {/* Frontend */}
         <h3 className="text-xl font-semibold mb-3">Frontend</h3>
@@ -34,8 +34,8 @@ const SkillsContent: React.FC = () => {
         <h3 className="text-xl font-semibold mb-3">Certificate</h3>
         <div className="space-y-4 mb-6">
           <div className="border-l-2 border-blue-500 pl-4">
-            <p className="text-gray-300 mt-2">certificate 1.</p>
-            <p className="text-gray-300 mt-2">certificate 2.</p>
+            <p className=" mt-2">certificate 1.</p>
+            <p className=" mt-2">certificate 2.</p>
           </div>
         </div>
 
@@ -45,8 +45,8 @@ const SkillsContent: React.FC = () => {
         <h3 className="text-xl font-semibold mb-3">Certificate</h3>
         <div className="space-y-4 mb-6">
           <div className="border-l-2 border-blue-500 pl-4">
-            <p className="text-gray-300 mt-2">certificate 1.</p>
-            <p className="text-gray-300 mt-2">certificate 2.</p>
+            <p className="mt-2">certificate 1.</p>
+            <p className="mt-2">certificate 2.</p>
           </div>
         </div>
         {/* DevOps */}
@@ -55,8 +55,8 @@ const SkillsContent: React.FC = () => {
         <h3 className="text-xl font-semibold mb-3">Certificate</h3>
         <div className="space-y-4 mb-6">
           <div className="border-l-2 border-blue-500 pl-4">
-            <p className="text-gray-300 mt-2">certificate 1.</p>
-            <p className="text-gray-300 mt-2">certificate 2.</p>
+            <p className=" mt-2">certificate 1.</p>
+            <p className=" mt-2">certificate 2.</p>
           </div>
         </div>
       </motion.div>
