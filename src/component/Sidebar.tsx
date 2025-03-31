@@ -1,4 +1,4 @@
-import { Menu, Files, BugPlay, Mail, CircleUserRound, Contrast } from "lucide-react";
+import { Menu, Files, BugPlay, Mail, CircleUserRound } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -32,8 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     { icon: <BugPlay size={28} strokeWidth={1.8} />, id: "skills", label: "Skills" },
     { icon: <Mail size={28} strokeWidth={1.8} />, id: "contact", label: "Contact" },
   ];
-
-  console.log("sidebar: " + activeTab);
 
   return (
     <div>

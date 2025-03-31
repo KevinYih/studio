@@ -5,7 +5,7 @@ import { projects } from "../../data/projects";
 
 const ProjectsContent: React.FC = () => {
   return (
-    <div className="min-h-screen  text-slate-400 px-6 py-6">
+    <div className="min-h-screen  text-slate-400 p-6">
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6  ">
         {projects.map((project, index) => (
           <motion.div key={index} whileHover={{ scale: 1.02 }} className="bg-explorerbg dark:bg-explorerbgd flex flex-col rounded-lg overflow-hidden shadow-md text-slate-400 dark:text-slate-600 hover:text-slate-200 dark:hover:text-slate-800">

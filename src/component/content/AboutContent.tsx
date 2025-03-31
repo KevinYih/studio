@@ -1,12 +1,22 @@
 import React from "react";
 
 import { motion } from "framer-motion";
+import KevinYihImage from "../../assets/KevinYih.jpg";
 
 const AboutContent: React.FC = () => {
   return (
     <div className=" p-6 max-w-4xl mx-auto">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-explorerbg dark:bg-explorerbgd text-gray-300 dark:text-gray-700 rounded-lg p-6">
-        <h2 className=" text-2xl font-bold mb-4 ">About Me</h2>
+        <div className="flex py-6">
+          <div className="w-1/2 flex  items-center">
+            <h2 className=" text-2xl font-bold mb-4 ">About Me</h2>
+          </div>
+          <div className="w-1/2 flex  items-center">
+            <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md">
+              <img src={KevinYihImage} alt="KevinYih" className="w-full h-full object-cover object-center" />
+            </div>
+          </div>
+        </div>
         <p className="mb-6">I'm a full-stack developer with expertise in web technologies. With several years of experience in building scalable applications, I focus on creating efficient, maintainable, and user-friendly solutions.</p>
         <h3 className="text-xl font-semibold mb-3 ">Experience</h3>
         <div className="space-y-4 mb-6">

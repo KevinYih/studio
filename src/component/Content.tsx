@@ -12,7 +12,6 @@ interface ContentProps {
 //max-w-8xl
 
 const Content: React.FC<ContentProps> = ({ activeTab }) => {
-  console.log("content: " + activeTab);
   return (
     <div className="w-full h-full  justify-center">
       <div className="p-2 ">

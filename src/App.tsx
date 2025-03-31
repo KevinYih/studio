@@ -5,7 +5,7 @@ import Explorer from "./component/Explorer";
 import Content from "./component/Content";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("projects");
+  const [activeTab, setActiveTab] = useState("about");
 
   return (
     <div className="flex bg-contentbg dark:bg-contentbgd h-screen text-teal-50 overflow-hidden">

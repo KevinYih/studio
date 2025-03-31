@@ -3,9 +3,9 @@ import techIcons from "../../data/techIcons";
 import { motion } from "framer-motion";
 
 const SkillsContent: React.FC = () => {
-  const frontendSkills = ["HTML5", "CSS3", "React", "Next.js", "JavaScript", "ES6+", "TypeScript", "Tailwind CSS", "Material-UI", "Styled Components"];
+  const frontendSkills = ["HTML5", "CSS3", "React", "Next.js", "JavaScript", "ES6+", "TypeScript", "Tailwind CSS", "Material-UI"];
 
-  const backendSkills = ["Java", "Spring Boot", "MySQL", "PostgreSQL", "MongoDB", "Hibernate", "MyBatis", "MyBatis Plus", "Redis"];
+  const backendSkills = ["Java", "Spring Boot", "MySQL", "PostgreSQL", "MongoDB", "Hibernate", "MyBatis", "Redis"];
 
   const devopsSkills = ["AWS", "Docker", "Kubernetes", "CI/CD"];
 

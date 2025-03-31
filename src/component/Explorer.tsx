@@ -17,6 +17,9 @@ interface FolderItemProps {
 const FolderItem: React.FC<FolderItemProps> = ({ label, children, active, onClick }) => {
   const [open, setOpen] = useState(false);
 
+  console.log("label: " + label);
+  console.log("active: " + active);
+
   const toggle = () => {
     setOpen(!open);
     onClick?.();
@@ -46,8 +49,6 @@ interface ExplorerProps {
 }
 
 const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
-  console.log("Explorer: " + activeTab);
-
   return (
     <div className="hidden sm:block w-64 bg-explorerbg dark:bg-explorerbgd text-slate-300 dark:text-slate-700 text-sm p-3  overflow-auto">
       <div className="text-xs mb-2">EXPLORER</div>
