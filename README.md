@@ -31,11 +31,15 @@ This portfolio mimics the look and feel of Visual Studio Code, providing a uniqu
 
 src/
 ├── assets/ # Static images, icons, etc.
-├── components/ # Reusable UI components (e.g. Sidebar, Tabs, EditorPanel)
-| └── content/ # AboutContent,ContactContent,ProjectsContent,SkillsContent
-| └── Content.tsx # Content
-| └── Explorer.tsx # Content
-| └── Sidebar.tsx # Content
+├── components/ # Reusable UI components
+|     └── content/ 
+|           └── AboutContent.tsx
+|           └── ContactContent.tsx
+|           └── ProjectsContent.tsx
+|           └── SkillsContent.tsx
+|     └── Content.tsx # Content
+|     └── Explorer.tsx # Content
+|     └── Sidebar.tsx # Content
 ├── data/ # projects.ts techIcons.ts
 |
 ├── App.tsx # Root component
