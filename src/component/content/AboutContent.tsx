@@ -15,18 +15,18 @@ const AboutContent: React.FC = () => {
           </div>
         </div>
 
-        <p className="mb-6">I'm a full-stack developer with expertise in web technologies. With several years of experience in building scalable applications, I focus on creating efficient, maintainable, and user-friendly solutions.</p>
+        <p className="mb-6">I'm a full-stack developer with expertise in web technologies. </p>
 
         <h3 className="text-xl font-semibold mb-3 ">Experience</h3>
         <div className="space-y-4 mb-6">
           <div className="border-l-2 border-blue-500 pl-4">
-            <h4 className="font-semibold ">Senior Full Stack Developer</h4>
-            <p className="">Tech Company • 2020 - Present</p>
-            <p className=" mt-2">Leading development of enterprise applications using React, Node.js, and cloud technologies.</p>
+            <h4 className="font-semibold ">Full Stack Developer</h4>
+            <p className="">Tech Company • 2024 - Present</p>
+            <p className=" mt-2">Development of enterprise applications using React, Java, and cloud technologies.</p>
           </div>
           <div className="border-l-2 border-blue-500 pl-4">
-            <h4 className="font-semibold ">Full Stack Developer</h4>
-            <p className="">Digital Agency • 2018 - 2020</p>
+            <h4 className="font-semibold ">Full Stack Developer Intern</h4>
+            <p className="">Digital Agency • 2022 - 2023</p>
             <p className=" mt-2">Developed and maintained multiple client projects using modern web technologies.</p>
           </div>
         </div>

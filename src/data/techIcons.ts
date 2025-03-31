@@ -1,4 +1,20 @@
 const techIcons = [
+  {
+    name: "Java",
+    color: "#007396",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "AWS",
+    color: "#232F3E",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+  },
+  {
+    name: "SQL",
+    color: "#1572B6",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+  },
+
   // === Frontend ===
   {
     name: "HTML5",
@@ -38,7 +54,7 @@ const techIcons = [
   {
     name: "Tailwind CSS",
     color: "#38B2AC",
-    icon: "https://github.com/devicons/devicon/blob/v2.16.0/icons/tailwindcss/tailwindcss-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     name: "Material-UI",
@@ -52,11 +68,7 @@ const techIcons = [
   },
 
   // === Backend ===
-  {
-    name: "Java",
-    color: "#007396",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-  },
+
   {
     name: "Spring Boot",
     color: "#6DB33F",
@@ -80,7 +92,7 @@ const techIcons = [
   {
     name: "Hibernate",
     color: "#59666C",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/2/22/Hibernate_logo_a.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original.svg",
   },
   {
     name: "MyBatis",
@@ -99,11 +111,7 @@ const techIcons = [
   },
 
   // === DevOps & Cloud ===
-  {
-    name: "AWS",
-    color: "#232F3E",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
-  },
+
   {
     name: "Docker",
     color: "#2496ED",

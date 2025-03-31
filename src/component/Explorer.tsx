@@ -50,9 +50,9 @@ interface ExplorerProps {
 
 const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
   // initial width is 256px（对应 w-64），limited to 200px to 320px
-  const [width, setWidth] = useState(256);
+  const [width, setWidth] = useState(270);
   const minWidth = 200;
-  const maxWidth = 320;
+  const maxWidth = 400;
 
   // Drag start event
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
