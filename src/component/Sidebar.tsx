@@ -1,5 +1,5 @@
 import { Menu, Files, BugPlay, Mail, CircleUserRound } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import React from "react";
 import { useEffect, useState } from "react";
 import { CiSun } from "react-icons/ci";
