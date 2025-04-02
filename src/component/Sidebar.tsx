@@ -1,4 +1,5 @@
-import { Menu, Files, BugPlay, Mail, CircleUserRound } from "lucide-react";
+import { Menu, Files, BugPlay, CircleUserRound } from "lucide-react";
+// import {  Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -30,15 +31,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     { icon: <CircleUserRound size={28} strokeWidth={1.8} />, id: "about", label: "About" },
     { icon: <Files size={28} strokeWidth={1.8} />, id: "projects", label: "projects" },
     { icon: <BugPlay size={28} strokeWidth={1.8} />, id: "skills", label: "Skills" },
-    { icon: <Mail size={28} strokeWidth={1.8} />, id: "contact", label: "Contact" },
+    // { icon: <Mail size={28} strokeWidth={1.8} />, id: "contact", label: "Contact" },
   ];
 
   return (
     <div>
-      <div className="w-18 bg-sidebarbg dark:bg-sidebarbgd text-slate-600 dark:text-slate-400 h-screen flex flex-col py-5 items-center">
+      <div className="w-18 bg-sidebarbg dark:bg-sidebarbgd text-slate-600 dark:text-slate-400  h-screen flex flex-col py-5 items-center">
         {<Menu size={25} strokeWidth={1.3} className="mb-2" />}
         {sidebarItems.map((item) => (
-          <motion.button key={item.id} onClick={() => setActiveTab(item.id)} whileTap={{ scale: 0.95 }} className={`p-3 mb-2 cursor-pointer hover:text-slate-300 dark:hover:text-slate-700  ${activeTab == item.id && "text-slate-300 border-l-1 dark:text-slate-700"}`}>
+          <motion.button key={item.id} onClick={() => setActiveTab(item.id)} whileTap={{ scale: 0.95 }} className={`p-3 mb-2 cursor-pointer hover:text-blue-500  ${activeTab == item.id && "text-slate-300 border-l-1 dark:text-slate-700"}`}>
             {item.icon}
           </motion.button>
         ))}

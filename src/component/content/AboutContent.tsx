@@ -2,6 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import KevinYihImage from "../../assets/KevinYih.jpg";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const AboutContent: React.FC = () => {
   return (
@@ -12,6 +13,22 @@ const AboutContent: React.FC = () => {
         <div className="flex justify-center mb-9">
           <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-md ">
             <img src={KevinYihImage} alt="KevinYih" className="w-full h-full object-cover object-center" />
+          </div>
+          <div>
+            <div className="pl-8 pt-3">
+              <a href="https://github.com/KevinYih" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-500">
+                <Github className="m-2" size={25} />
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/kevin-kun-yi/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-500">
+                <Linkedin className="m-2" size={25} />
+                LinkedIn
+              </a>
+              <a href="mailto:kevinyih2022@gmail.com" className="flex items-center hover:text-blue-500">
+                <Mail className="m-2" size={25} />
+                Email
+              </a>
+            </div>
           </div>
         </div>
 

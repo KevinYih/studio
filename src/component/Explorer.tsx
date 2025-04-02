@@ -1,7 +1,8 @@
 import React from "react";
 
 import { useState } from "react";
-import { Folder, FolderOpen, Monitor, Server, Workflow, GraduationCap, Briefcase, UserPlus } from "lucide-react";
+import { Folder, FolderOpen, Monitor, Server, Workflow, GraduationCap, Briefcase } from "lucide-react";
+// import { UserPlus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { projects } from "../data/projects";
@@ -17,9 +18,6 @@ interface FolderItemProps {
 const FolderItem: React.FC<FolderItemProps> = ({ label, children, active, onClick }) => {
   const [open, setOpen] = useState(false);
 
-  console.log("label: " + label);
-  console.log("active: " + active);
-
   const toggle = () => {
     setOpen(!open);
     onClick?.();
@@ -27,7 +25,7 @@ const FolderItem: React.FC<FolderItemProps> = ({ label, children, active, onClic
 
   return (
     <div>
-      <button onClick={toggle} className={`flex items-center px-2 py-1 w-full text-left hover:bg-slate-600 dark:hover:bg-slate-200 ${active ? "bg-slate-500 dark:bg-slate-300  text-gray-300 dark:text-gray-700 " : "text-slate-300 dark:text-slate-700"}`}>
+      <button onClick={toggle} className={`flex cursor-pointer items-center px-2 py-1 w-full text-left hover:text-blue-500 hover:bg-gray-600 dark:hover:bg-gray-200 ${active ? "bg-slate-500 dark:bg-slate-300  text-gray-200 dark:text-gray-800 " : "text-slate-200 dark:text-slate-800"}`}>
         {open ? <FolderOpen size={16} className="mr-2" /> : <Folder size={16} className="mr-2" />}
         {label}
       </button>
@@ -77,14 +75,14 @@ const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
 
   return (
     <div style={{ width: `${width}px` }} className="hidden sm:block w-64 bg-explorerbg dark:bg-explorerbgd text-slate-300 dark:text-slate-700 text-sm p-3  overflow-auto relative">
-      <div className="text-xs mb-2">EXPLORER</div>
-      <div className="text-xs mb-1 flex">
+      <div className="text-xs mb-4">EXPLORER</div>
+      <div className="text-s mb-3 flex items-center">
         <FolderOpen size={16} className="mr-2" />
-        KevinYih
+        Kevin Yih
       </div>
 
       <div className="ml-1 space-y-1">
-        <FolderItem label="about" active={activeTab === "about"} onClick={() => setActiveTab("about")}>
+        <FolderItem label="PROPFILE" active={activeTab === "about"} onClick={() => setActiveTab("about")}>
           <div className=" pl-6 py-1 flex items-center gap-2">
             <Briefcase size={16} />
             Experience
@@ -95,7 +93,7 @@ const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
           </div>
         </FolderItem>
 
-        <FolderItem label="projects" active={activeTab === "projects"} onClick={() => setActiveTab("projects")}>
+        <FolderItem label="PROJECTS" active={activeTab === "projects"} onClick={() => setActiveTab("projects")}>
           <div className="space-y-2">
             {projects.map((project) => {
               const match = techIcons.find((t) => t.name === project.technologies[0]);
@@ -111,7 +109,7 @@ const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
           </div>
         </FolderItem>
 
-        <FolderItem label="skills" active={activeTab === "skills"} onClick={() => setActiveTab("skills")}>
+        <FolderItem label="SKILLS" active={activeTab === "skills"} onClick={() => setActiveTab("skills")}>
           <div className=" pl-6 py-1 flex items-center gap-2">
             <Monitor size={16} />
             <span>Frontend</span>
@@ -126,12 +124,12 @@ const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
           </div>
         </FolderItem>
 
-        <FolderItem label="contact" active={activeTab === "contact"} onClick={() => setActiveTab("contact")}>
+        {/* <FolderItem label="contact" active={activeTab === "contact"} onClick={() => setActiveTab("contact")}>
           <div className=" pl-6 py-1 flex items-center gap-2">
             <UserPlus size={16} />
             <span>Connect</span>
           </div>
-        </FolderItem>
+        </FolderItem> */}
       </div>
       <div className="absolute top-0 right-0 h-full cursor-ew-resize w-1 bg-gray-400 dark:bg-gray-600 hover:bg-gray-500 transition" onMouseDown={handleMouseDown} />
     </div>
