@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "Film Port",
     description: "A modern movie browsing application built using the TMDB API. This React-based project allows users to explore movies, view actor details.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Socket.io"],
+    technologies: ["React", "Tailwind", "Router", "Redux"],
     githubUrl: "https://github.com/KevinYih/FilmPortRedux",
     liveUrl: "https://filmport.netlify.app/",
     image: "",

@@ -21,19 +21,23 @@ const ProjectsContent: React.FC = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-4 mt-auto">
-                {project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-400">
-                    <Github className="mr-1" size={20} />
-                    <span className="text-sm hidden sm:inline">GitHub</span>
-                  </a>
-                )}
-                {project.liveUrl && (
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-400">
-                    <TvMinimalPlay className="mr-1" size={20} />
-                    <span className="text-sm hidden sm:inline">Live</span>
-                  </a>
-                )}
+              <div className="flex gap-8 mt-auto ">
+                <div>
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-400 hover:scale-110">
+                      <Github className="mr-1" size={25} />
+                      <span className="text-sm hidden sm:inline">GitHub</span>
+                    </a>
+                  )}
+                </div>
+                <div>
+                  {project.liveUrl && (
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-blue-400 hover:scale-110">
+                      <TvMinimalPlay className="mr-1" size={25} />
+                      <span className="text-sm hidden sm:inline">Live</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </motion.div>
