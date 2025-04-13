@@ -94,15 +94,18 @@ const Explorer: React.FC<ExplorerProps> = ({ activeTab, setActiveTab }) => {
         </FolderItem>
 
         <FolderItem label="PROJECTS" active={activeTab === "projects"} onClick={() => setActiveTab("projects")}>
-          <div className="space-y-2">
+          <div className="space-y-4 cursor-pointer scale-105 my-4">
             {projects.map((project) => {
               const match = techIcons.find((t) => t.name === project.technologies[0]);
               if (!match) return null;
               return (
-                <div key={project.title} className=" pl-6 py-0.5 lowercase flex items-center gap-2">
-                  {" "}
-                  <img src={match.icon} alt={match.name} className="w-5 h-5" style={{ filter: "drop-shadow(0 0 1px rgba(255,255,255,0.5))" }} />
-                  {project.title}
+                <div>
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <div key={project.title} className=" pl-6 py-0.5 lowercase flex items-center gap-2 hover:text-blue-500">
+                      <img src={match.icon} alt={match.name} className="w-5 h-5" style={{ filter: "drop-shadow(0 0 1px rgba(255,255,255,0.5))" }} />
+                      {project.title}
+                    </div>
+                  </a>
                 </div>
               );
             })}

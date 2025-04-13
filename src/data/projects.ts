@@ -2,12 +2,12 @@ import { Project } from "../types";
 
 export const projects: Project[] = [
   {
-    title: "E-Commerce Advanced Platform",
-    description: "A full-stack e-commerce platform with real-time inventory management and secure payment processing",
+    title: "Film Port",
+    description: "A modern movie browsing application built using the TMDB API. This React-based project allows users to explore movies, view actor details.",
     technologies: ["React", "Node.js", "MongoDB", "Stripe", "Socket.io"],
-    githubUrl: "https://github.com/yourusername/ecommerce",
-    liveUrl: "https://ecommerce-demo.com",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
+    githubUrl: "https://github.com/KevinYih/FilmPortRedux",
+    liveUrl: "https://filmport.netlify.app/",
+    image: "",
   },
   {
     title: "Task Management System",
