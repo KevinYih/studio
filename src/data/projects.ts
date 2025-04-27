@@ -1,4 +1,6 @@
 import { Project } from "../types";
+import filmportPoster from "../assets/filmportPoster.jpg";
+import yihhomes from "../assets/yihhomes.jpg";
 
 export const projects: Project[] = [
   {
@@ -7,15 +9,15 @@ export const projects: Project[] = [
     technologies: ["React", "Tailwind", "Router", "Redux"],
     githubUrl: "https://github.com/KevinYih/FilmPortRedux",
     liveUrl: "https://filmport.netlify.app/",
-    image: "",
+    image: filmportPoster,
   },
   {
-    title: "Task Management System",
-    description: "A collaborative task management system with real-time updates and team collaboration features",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
-    githubUrl: "https://github.com/yourusername/task-manager",
-    liveUrl: "https://task-manager-demo.com",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+    title: "Find The Perfect Rental",
+    description: "Property Rental Website in Vancouver.",
+    technologies: ["Next.js", "Javascript", "MongoDB", "Next Auth & Google", "Cloudinary"],
+    githubUrl: "https://github.com/KevinYih/yih-homes-nextjs",
+    liveUrl: "https://yihhomes.netlify.app/",
+    image: yihhomes,
   },
   {
     title: "AI Image Generator",
