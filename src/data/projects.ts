@@ -1,6 +1,7 @@
 import { Project } from "../types";
 import filmportPoster from "../assets/filmportPoster.jpg";
 import yihhomes from "../assets/yihhomes.jpg";
+import kmdb from "../assets/kmdb.jpg";
 
 export const projects: Project[] = [
   {
@@ -20,12 +21,12 @@ export const projects: Project[] = [
     image: yihhomes,
   },
   {
-    title: "AI Image Generator",
-    description: "An AI-powered image generation tool using machine learning models and real-time processing",
-    technologies: ["Python", "TensorFlow", "React", "FastAPI"],
-    githubUrl: "https://github.com/yourusername/ai-image-gen",
-    liveUrl: "https://ai-image-gen-demo.com",
-    image: "https://images.unsplash.com/photo-1547954575-855750c57bd3",
+    title: "TMDB clone",
+    description: "A responsive TMDB frontend clone built with React, Redux, MUI, and Router for movie browsing.",
+    technologies: ["React", "Redux", "MUI", "Router"],
+    githubUrl: "https://github.com/KevinYih/KMDBclone",
+    liveUrl: "https://kmdbclone.netlify.app/",
+    image: kmdb,
   },
   {
     title: "E-Commerce Platform",
